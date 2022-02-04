@@ -13,7 +13,7 @@ resource "google_storage_bucket" "cloudfunctions_bucket" {
 
 # Create a cloud function named `hello-world`
 module "cloudfunction--hello-world" {
-  source      = "github.com/vbridgebvba/terraform-gcloud-http-cloud-function"
+  source      = "github.com/bramus/terraform-gcloud-event-cloud-function"
   bucket_name = google_storage_bucket.cloudfunctions_bucket.name
   name        = "hello-world"
 }
@@ -56,7 +56,7 @@ resource "google_storage_bucket" "cloudfunctions_bucket" {
 
 # Create a cloud function named `hello-world`
 module "cloudfunction--hello-world" {
-  source                 = "github.com/vbridgebvba/terraform-gcloud-http-cloud-function"
+  source                 = "github.com/bramus/terraform-gcloud-event-cloud-function"
   bucket_name            = google_storage_bucket.cloudfunctions_bucket.name
   name                   = "hello-world"
   source_dir             = "./functions/hello-world/src"
