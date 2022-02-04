@@ -26,8 +26,8 @@ variable "description" {
 
 variable "runtime" {
   type        = string
-  description = "(Optional) The runtime in which the function is going to run. One of `nodejs6`, `nodejs8`, `nodejs10`, `python37`, `go111`. Default value is `python37`."
-  default     = "python37"
+  description = "(Optional) The runtime in which the function is going to run. One of https://cloud.google.com/functions/docs/concepts/exec#runtimes. Default value is `python39`."
+  default     = "python39"
 }
 
 variable "entry_point" {
