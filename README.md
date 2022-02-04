@@ -37,7 +37,7 @@ The module `terraform-gcloud-http-cloud-function` will:
 - `source_dir`= `"./cloudfunctions/${var.name}"`
 - `description`: `"${var.name} HTTP Cloud Function"`
 - `runtime`: `"python37"`
-- `entrypoint`: `"__main__"`
+- `entry_point`: `"__main__"`
 - `available_memory_mb`: `128`
 - `timeout`: `60`
 - `environment_variables`= `{}`
