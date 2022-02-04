@@ -3,6 +3,13 @@ data "archive_file" "function_zip" {
   type        = "zip"
   source_dir  = var.source_dir != "" ? var.source_dir : "./cloudfunctions/${var.name}"
   output_path = var.source_dir != "" ? "${var.source_dir}/../${var.name}.zip" : "./cloudfunctions/${var.name}.zip"
+  excludes = [
+    ".gitignore",
+    "composer.lock",
+    "vendor",
+    "package-lock.json",
+    "node_modules",
+  ]
 }
 
 # Store ziped code in the bucket
